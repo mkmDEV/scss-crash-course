@@ -24,8 +24,7 @@ a {
 }
 
 .showcase {
-  background-color: $primary-color;
-  color: $light-color;
+  @include set-background($primary-color);
   height: 600px;
 
   nav {
@@ -40,6 +39,10 @@ a {
 
     li {
       padding: 15px;
+    }
+
+    a {
+      color: set-text-color($primary-color);
     }
 
     a:hover {
